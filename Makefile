@@ -1,4 +1,4 @@
-HELL = /bin/bash
+SHELL = /bin/bash
 .SHELLFLAGS = -o pipefail -e -c
 .ONESHELL:
 

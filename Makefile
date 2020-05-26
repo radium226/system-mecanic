@@ -48,7 +48,7 @@ mount-subvolumes: create-subvolumes
 .PHONY: take-snapshot
 take-snapshot:
 	! test -d "./hard-drive/@snapshots/home" && sudo mkdir -p "./hard-drive/@snapshots/home" || true
-	sudo btrfs subvolume snapshot "./subvolumes/home" "./hard-drive/@snapshots/home/$$( date -u +"%H:%M" )"
+	sudo btrfs subvolume snapshot "./subvolumes/home" "./hard-drive/@snapshots/home/$$( date -u +"%H:%M" )" -r
 
 .PHONY: list-snapshots
 list-snapshots:
